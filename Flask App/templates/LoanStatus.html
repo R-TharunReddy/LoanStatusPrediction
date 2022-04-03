@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/style.css') }}"  rel="stylesheet" >
+<!--link href="E:/rsip-2020/Internship project/EDA Loan Status Prediction/Flask/Static/css/style.css"  rel="stylesheet" >-->
+  <title>loan prediction</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form-img">
+        <style>
+        body{
+background-image:url('https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1559995493000/photosp/5121c6cf-c798-4f8d-8c1d-e27e76e7c280/stock-photo-growth-business-wealth-money-background-concept-financial-loan-debt-5121c6cf-c798-4f8d-8c1d-e27e76e7c280.jpg');
+background-position: center;
+font-family:sans-serif;
+background-size:cover;
+}
+</style>
+      <div class="img-content">
+        <h1><b>LOAN STATUS PREDICTION</b></h1>
+      </div>
+    </div>
+    <div class="lform">
+      <form class="form-ip" action="./predict" method="post">
+        <div class="form-row">
+        <div class="form-group">
+          <b>Enter Your Current Loan Amount</b> <select id="Current Loan Amount" name="Current Loan Amount">
+<option value="">select an option </option>
+<option value="2">Small Loan</option>    
+<option value="1">Medium Loan</option>
+    <option value="0">Big Loan</option>
+  </select><br><br>
+
+<b>Enter The Term Type</b> <select id="Term" name=" ">
+<option value="">Select the Term</option>
+    <option value="1">Long Term</option>
+    <option value="0">Short Term</option>
+  </select><br><br>
+
+<b>Enter Your Credit Score</b><select id="Credit Score" name="Credit Score">
+<option value="">select an option</option>
+    <option value="0">Average</option>
+    <option value="1">Good</option>
+<option value="2">Very Good</option>
+  </select><br><br>
+
+<b>Enter Your Annual Income</b> <input type="text" name="Annual Income" placeholder="Annual Income" required="required"><br><br>
+
+
+<b>Enter Your Years At Work</b> <input class="form-input" type="text" name="Years at work" placeholder="Years At Work" required="required"><br><br>
+
+<b>Enter Your Home Ownership Type<select id="Home Ownership" name="Home Ownership">
+<option value="">select an option</option>
+    <option value="0">HaveMortgage</option>
+    <option value="2">Own Home</option>
+<option value="3">Rent</option>
+    <option value="1">Home Mortgage</option>
+  </select><br><br>
+
+
+<b>Enter Your Credit History </b><input class="form-input" type="text" name="Years of Credit History" placeholder="Credit History"><br><br>
+
+<b>Enter Your Number of Credit Issues</b><input class="form-input" type="text" name="Number of Credit Problems" placeholder="Credit Issues"><br><br>
+
+<b>Enter If Any Bankruptcies <select id="Bankruptcies" name="Bankruptcies">
+<option value="">select your Bankruptcies</option>
+
+<option value="0">Many Bankruptcies</option>    
+<option value="1">No bankruptcies</option>
+    <option value="2">Few Bankruptcies</option>
+  </select><br><br>
+
+<b>Enter Your TaxLiens <select id="Tax Liens" name="Tax Liens">
+<option value="">Select your Tax Liens</option>
+     <option value="0">Many Tax Liens</option>    
+<option value="1">No Tax Lien</option>
+    <option value="2">ome Tax Liens</option>
+  </select><br><br>
+
+<b>Enter Your Credit Problems <select id="Credit Problems" name="Credit Problems">
+<option value="">Select Credit Problems</option>
+     <option value="0">No Credit Problem</option>    
+<option value="1">No Tax Lien</option>
+    <option value="2">Some Credit promblem</option>
+  </select><br><br>
+
+
+<b>Enter Your Credit Age </b> <select id="Credit Age" name="Credit Age">
+<option value="">Select Credit Age</option>
+     <option value="0">Exceptional Credit Age</option>    
+<option value="1">Good Credit Age</option>
+    <option value="2">Short Credit Age</option>
+  </select><br><br>
+         <button type="submit" class="my-cta-button">Predict</button>
+      </form>
+    </div>
+    <div class="op">
+      <p>{{showcase}}</p>
+    </div>
+  </div>
+</body>
+
+</html>
