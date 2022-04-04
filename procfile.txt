@@ -1,1 +1,2 @@
-web: python myApp.py runserver 0.0.0.0:$PORT
+web: Flask App/app.py runserver 0.0.0.0:$PORT
+
